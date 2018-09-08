@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+}
+.form-group {
+    padding: 5%;
+}
+img {
+    width: 100px;
+}
+.form-wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+#timer-bar {
+    display: contents;
+}
