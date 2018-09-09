@@ -10,6 +10,7 @@ img {
 .form-wrapper {
     width: 50%;
     margin: 0 auto;
+    padding: 5%;
 }
 #timer-bar {
     display: contents;
