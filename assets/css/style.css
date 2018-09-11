@@ -22,3 +22,6 @@ img {
     display: none;
     margin: 10% 5%;
 }
+.carousel-item {
+    height: 100%;
+}

@@ -1,5 +1,13 @@
 // https://bootsnipp.com/snippets/PjyVm
 // for when I am moving the progress bar
+// Need to set up timer
+//      2 timers, one for the question (20 seconds), one for the answer panel (10 seconds)
+// connect those to the carosel
+// Figure out a DRY way of comparing user answers to correct answers (objects)
+// Styling
+// 
+
+
 var questionAry = [
     {
     questionNumber: 1,
