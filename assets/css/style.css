@@ -15,3 +15,10 @@ img {
 #timer-bar {
     display: contents;
 }
+#start-button {
+    width: 125px;    
+}
+.carousel-wrapper {
+    display: none;
+    margin: 10% 5%;
+}
