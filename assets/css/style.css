@@ -1,6 +1,9 @@
 body {
     height: 100%;
 }
+h1, h2, h3 {
+    text-align: center;
+}
 .form-group {
     padding: 5%;
 }
@@ -24,4 +27,16 @@ img {
 }
 .carousel-item {
     height: 100%;
+}
+.result {
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.band-pic {
+    width: 100%;
+}
+.album-art {
+    width: 100%;
 }

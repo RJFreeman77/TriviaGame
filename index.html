@@ -13,9 +13,10 @@
 
 <body>
     <section class="container h-100">
-        <div class="jumbotron" id="jumbotron">
+        <div class="jumbotron" id="jumbotron1">
             <h1 class="display-4 text-center">00's Alt Rock-Band Quiz!</h1>
-            <p class="lead text-center">Once you click start, a song will start to play. You have 40 seconds to guess who the band is!</p>
+            <p class="lead text-center">Once you click start, a song will start to play. <br>You have 40 seconds to guess
+                who the band is!</p>
             <hr class="my-4">
             <p class="text-center">Turn your sound on and click Start to get going!</p>
             <p class="text-center" id="timer-display"></p>
@@ -27,17 +28,18 @@
             <div class="progress" style="height: 25px;">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
                     aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-                    <span id="timer-bar">15</span>
+                    <span id="timer-bar">0</span>
                     seconds</div>
             </div>
             <div id="carousel-div" class="carousel slide" data-ride="false" data-interval="false">
                 <div class="carousel-inner">
-                    <div class="carousel-item active bg-light">
+
+                    <div class="carousel-item bg-light active" data-question="q0">
                         <div class="form-wrapper">
                             <section class="row">
                                 <div class="col">
                                     <div class="question text-center">
-                                        <p>Star of this 1980's Sci-Fi film?</p>
+                                        <p>Guess the name of this band</p>
                                     </div>
                                 </div>
                             </section>
@@ -47,40 +49,79 @@
                                     <form id="question1">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion1"
-                                                value="option1">
+                                                value="thekillers">
                                             <label class="form-check-label" for="firstquestion1">
-                                                Ryan Gosling
+                                                The Killers
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion2"
-                                                value="option2">
+                                                value="modestmouse">
                                             <label class="form-check-label" for="firstquestion2">
-                                                Harrison Ford
+                                                Modest Mouse
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion3"
-                                                value="option3">
+                                                value="greenday">
                                             <label class="form-check-label" for="firstquestion3">
-                                                Nic Cage
+                                                Green Day
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion4"
+                                                value="redhotchilipeppers">
+                                            <label class="form-check-label" for="firstquestion4">
+                                                Red Hot Chili Peppers
                                             </label>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col">
-                                    <img src="assets/images/blade-runner-poster.jpg" alt="blade runner poster">
+                                    <img class="album-art" src="assets/images/album-covers/modesmouse.jpg" alt="album artwork">
                                 </div>
 
                             </section>
                         </div>
                     </div>
-                    <div class="carousel-item bg-light">
+                    <div class="carousel-item bg-light" data-question="a0">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <h2>Modest Mouse</h2>
+                                </div>
+                            </section>
+                            <section class="row result correct">
+                                <div class="col">
+                                    <h3>Thats Right!</h3>
+                                </div>
+                            </section>
+                            <section class="row result wrong">
+                                <div class="col">
+                                    <h3>Oops Wrong Answer!</h3>
+                                </div>
+                            </section>
+                            <section class="row result out-of-time">
+                                <div class="col">
+                                    <h3>Whoops! Out of Time!</h3>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col">
+                                    <img class="band-pic" src="assets/images/band-pics/modestmouse.jpg" alt="Band Picture">
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light" data-question="q1">
                         <div class="form-wrapper">
                             <section class="row">
                                 <div class="col">
                                     <div class="question text-center">
-                                        <p>Famous character played by Robert Downey Jr.</p>
+                                        <p>Guess the name of this band</p>
                                     </div>
                                 </div>
                             </section>
@@ -89,78 +130,322 @@
                                 <div class="col">
                                     <form id="question2">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion1"
-                                                value="option1">
-                                            <label class="form-check-label" for="firstquestion1">
-                                                Iron Man
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="secquestion1"
+                                                value="u2">
+                                            <label class="form-check-label" for="secquestion1">
+                                                U2
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion2"
-                                                value="option2">
-                                            <label class="form-check-label" for="firstquestion2">
-                                                Batman
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="secquestion2"
+                                                value="jimmyeatworld">
+                                            <label class="form-check-label" for="secquestion2">
+                                                Jimmy Eat World
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion3"
-                                                value="option3">
-                                            <label class="form-check-label" for="firstquestion3">
-                                                Nic Cage
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="secquestion3"
+                                                value="articmonkeys">
+                                            <label class="form-check-label" for="secquestion3">
+                                                Artic Monkeys
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="secquestion4"
+                                                value="blink182">
+                                            <label class="form-check-label" for="secquestion4">
+                                                Blink 182
                                             </label>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col">
-                                    <img src="assets/images/blade-runner-poster.jpg" alt="blade runner poster">
+                                    <img class="album-art" src="assets/images/album-covers/blink182.jpg" alt="album artwork">
                                 </div>
 
                             </section>
                         </div>
                     </div>
-                    <div class="carousel-item bg-light">
+
+                    <div class="carousel-item bg-light" data-question="a1">
                         <div class="form-wrapper">
                             <section class="row">
                                 <div class="col">
+                                    <h2>Blink 182</h2>
+                                </div>
+                            </section>
+                            <section class="row result correct">
+                                <div class="col">
+                                    <h3>Thats Right!</h3>
+                                </div>
+                            </section>
+                            <section class="row result wrong">
+                                <div class="col">
+                                    <h3>Oops Wrong Answer!</h3>
+                                </div>
+                            </section>
+                            <section class="row result out-of-time">
+                                <div class="col">
+                                    <h3>Whoops! Out of Time!</h3>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col">
+                                    <img class="band-pic" src="assets/images/band-pics/blink182.jpg" alt="Band Picture">
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light" data-question="q2">
+                        <div class="form-wrapper">
+
+                            <section class="row">
+                                <div class="col">
                                     <div class="question text-center">
-                                        <p>Actor who co-started with Jon Travolta</p>
+                                        <p>Guess the name of this band</p>
                                     </div>
                                 </div>
                             </section>
 
                             <section class="row">
                                 <div class="col">
-                                    <form id="question2">
+                                    <form id="question3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion1"
-                                                value="option1">
-                                            <label class="form-check-label" for="firstquestion1">
-                                                Big Bird
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="thirdquestion1"
+                                                value="nickelback">
+                                            <label class="form-check-label" for="thirdquestion1">
+                                                Nickelback
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion2"
-                                                value="option2">
-                                            <label class="form-check-label" for="firstquestion2">
-                                                Hugh Jackman
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="thirdquestion2"
+                                                value="theoffspring">
+                                            <label class="form-check-label" for="thirdquestion2">
+                                                The Offspring
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioquestion" id="firstquestion3"
-                                                value="option3">
-                                            <label class="form-check-label" for="firstquestion3">
-                                                Nic Cage
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="thirdquestion3"
+                                                value="mychemicalromance">
+                                            <label class="form-check-label" for="thirdquestion3">
+                                                My Chemical Romance
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="thirdquestion4"
+                                                value="pearljam">
+                                            <label class="form-check-label" for="thirdquestion4">
+                                                Pearl Jam
                                             </label>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col">
-                                    <img src="assets/images/blade-runner-poster.jpg" alt="blade runner poster">
+                                    <img class="album-art" src="assets/images/album-covers/mychemicalromance.jpg" alt="album artwork">
                                 </div>
 
                             </section>
                         </div>
                     </div>
+                    <div class="carousel-item bg-light" data-question="a2">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <h2>My Chemical Romance</h2>
+                                </div>
+                            </section>
+                            <section class="row result correct">
+                                <div class="col">
+                                    <h3>Thats Right!</h3>
+                                </div>
+                            </section>
+                            <section class="row result wrong">
+                                <div class="col">
+                                    <h3>Oops Wrong Answer!</h3>
+                                </div>
+                            </section>
+                            <section class="row result out-of-time">
+                                <div class="col">
+                                    <h3>Whoops! Out of Time!</h3>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col">
+                                    <img class="band-pic" src="assets/images/band-pics/mychemicalromance.jpg" alt="Band Picture">
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light" data-question="q3">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <div class="question text-center">
+                                        <p>Guess the name of this band</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="row">
+                                <div class="col">
+                                    <form id="question4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="4thquestion1"
+                                                value="takingbacksunday">
+                                            <label class="form-check-label" for="4thquestion1">
+                                                Taking Back Sunday
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="4thquestion2"
+                                                value="arcadefire">
+                                            <label class="form-check-label" for="4thquestion2">
+                                                Arcade Fire
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="4thquestion3"
+                                                value="queensofthestoneage">
+                                            <label class="form-check-label" for="4thquestion3">
+                                                Queens Of The Stone Age
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="4thquestion4"
+                                                value="threedaysgrace">
+                                            <label class="form-check-label" for="4thquestion4">
+                                                Three Days Grace
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col">
+                                    <img class="album-art" src="assets/images/album-covers/takingbacksunday.jpg" alt="album artwork">
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-light" data-question="a3">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <h2>Taking Back Sunday</h2>
+                                </div>
+                            </section>
+                            <section class="row result correct">
+                                <div class="col">
+                                    <h3>Thats Right!</h3>
+                                </div>
+                            </section>
+                            <section class="row result wrong">
+                                <div class="col">
+                                    <h3>Oops Wrong Answer!</h3>
+                                </div>
+                            </section>
+                            <section class="row result out-of-time">
+                                <div class="col">
+                                    <h3>Whoops! Out of Time!</h3>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col">
+                                    <img class="band-pic" src="assets/images/band-pics/takingbacksunday.jpg" alt="Band Picture">
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light" data-question="q4">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <div class="question text-center">
+                                        <p>Guess the name of this band</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="row">
+                                <div class="col">
+                                    <form id="question5">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="5thquestion1"
+                                                value="reelbigfish">
+                                            <label class="form-check-label" for="5thquestion1">
+                                                Reel Big Fish
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="5thquestion2"
+                                                value="gorillaz">
+                                            <label class="form-check-label" for="5thquestion2">
+                                                Gorillaz
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="5thquestion3"
+                                                value="incubus">
+                                            <label class="form-check-label" for="5thquestion3">
+                                                Incubus
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioquestion" id="5thquestion4"
+                                                value="linkinpark">
+                                            <label class="form-check-label" for="5thquestion4">
+                                                Linkin Park
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col">
+                                    <img class="album-art" src="assets/images/album-covers/reelbigfish.jpg" alt="album artwork">
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-light" data-question="a4">
+                        <div class="form-wrapper">
+                            <section class="row">
+                                <div class="col">
+                                    <h2>Reel Big Fish</h2>
+                                </div>
+                            </section>
+                            <section class="row result correct">
+                                <div class="col">
+                                    <h3>Thats Right!</h3>
+                                </div>
+                            </section>
+                            <section class="row result wrong">
+                                <div class="col">
+                                    <h3>Oops Wrong Answer!</h3>
+                                </div>
+                            </section>
+                            <section class="row result out-of-time">
+                                <div class="col">
+                                    <h3>Whoops! Out of Time!</h3>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col">
+                                    <img class="band-pic" src="assets/images/band-pics/reelbigfish.jpg" alt="Band Picture">
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+
+
                     <a class="carousel-control-prev" href="#carousel-div" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
