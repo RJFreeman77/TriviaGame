@@ -10,17 +10,23 @@ h1, h2, h3 {
 img {
     width: 100px;
 }
+form {
+    height: 100%;
+    margin-top: 30%;
+}
 .progress {
     height: 2rem;
 }
 .progress-bar {
+    height: 100%;
     text-align: center;
     margin: auto;
+    font-size: 1rem;
 }
 .form-wrapper {
     width: 50%;
     height: 25rem;
-    margin: 0 auto;
+    margin: 0 20%;
     padding: 5%;
 }
 .carousel-wrapper {

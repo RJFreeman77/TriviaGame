@@ -1,4 +1,3 @@
-// https://bootsnipp.com/snippets/PjyVm
 // general variables
 var questionAry = [
     {
@@ -39,16 +38,21 @@ var timer = {
     },
     start: function (x) {
         timer.time = x;
-        intervalId = setInterval(timer.count, 1000);
+        intervalId = setInterval(timer.count, 250);
+        timerDisplay.text(timer.time);
     },
     stop: function () {
         clearInterval(intervalId);
         clockRunning = false;
     },
     count: function () {
-        timer.time--;
-        timerDisplay.text(timer.time);
+        console.log(timer.time);
+        timer.time = timer.time - 0.25;
         animateBar();
+        if (timer.time % 1 === 0) {
+            timerDisplay.text(timer.time);
+            console.log(timer.time);
+        }
         if (timer.time <= 0 && isQuestion) {
             checkAnswer("out-of-time");
         } else if (timer.time <= !isQuestion) {
@@ -103,7 +107,7 @@ function hideResult() {
     $(".result").hide();
 }
 function animateBar() {
-    width = (timer.time / 45) * 100;
+    width = (timer.time / 40) * 100;
     $("#progress-bar").css("width", width + "%");
 }
 function nextQuestion() {
