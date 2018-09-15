@@ -36,12 +36,14 @@
         </div>
 
         <div class="carousel-wrapper">
-            <div class="progress" style="height: 25px;">
+            <div class="progress" style="height: 25px;" id="progress-div">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-                    aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-                    <span id="timer-bar">0</span>
+                    aria-valuemin="0" aria-valuemax="100" style="width: 100%" id="progress-bar">
+                    <span id="timer-bar"></span>
                     seconds</div>
             </div>
+
+
             <div id="carousel-div" class="carousel slide" data-ride="false" data-interval="false">
                 <div class="carousel-inner">
 
@@ -455,16 +457,6 @@
 
                         </div>
                     </div>
-
-
-                    <a class="carousel-control-prev" href="#carousel-div" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-div" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </div>

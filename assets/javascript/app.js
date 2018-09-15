@@ -1,5 +1,5 @@
 // https://bootsnipp.com/snippets/PjyVm
-
+// general variables
 var questionAry = [
     {
         questionNumber: 1,
@@ -22,11 +22,10 @@ var questionAry = [
         bandName: "reelbigfish",
         audioSrc: "assets/audio/reelbigfish-takeonme.mp3",
     }]
-
 var questionNum = 0;
 var userScore = 0;
 var audioElement = document.createElement("audio");
-audioElement.setAttribute("src", questionAry[questionNum].audioSrc);
+
 // timer set up
 var intervalId;
 var timerDisplay = $("#timer-bar");
@@ -49,6 +48,7 @@ var timer = {
     count: function () {
         timer.time--;
         timerDisplay.text(timer.time);
+        animateBar();
         if (timer.time <= 0 && isQuestion) {
             checkAnswer("out-of-time");
         } else if (timer.time <= !isQuestion) {
@@ -57,28 +57,36 @@ var timer = {
         }
     }
 }
+
 $(document).ready(function () {
     $("#start-button").on("click", function () {
         isQuestion = true;
         $("#jumbotron1").hide(500);
         $(".carousel-wrapper").show(500);
         timer.start(40);
+        audioElement.setAttribute("src", questionAry[questionNum].audioSrc);
         audioElement.play();
-        console.log(audioElement);
     });
-
     $(".form-check-input").on("click", function () {
         var selectedValue = $(this).attr("value");
         checkAnswer(selectedValue);
     });
-
-
+    $("#restart-button").on("click", function () {
+        $("#jumbotron2").hide();
+        $("#jumbotron1").show();
+        questionNum = 0;
+        userScore = 0;
+        isQuestion = true;
+        audioElement.pause();
+        $(".carousel").carousel("next");
+    });
 });
 
-// Funtions
+// funtions
 function checkAnswer(userAnswer) {
     $(".carousel").carousel("next");
     timer.stop();
+    $("#progress-div").css("visibility", "hidden");
     isQuestion = false;
     if (userAnswer === questionAry[questionNum].bandName) {
         userScore++;
@@ -90,22 +98,20 @@ function checkAnswer(userAnswer) {
     }
     timer.start(5);
     questionNum++;
-    console.log("questionNum:", questionNum);
 }
-
 function hideResult() {
     $(".result").hide();
 }
-function goToResultsPage() {
-    $("#user-score").html(userScore + " / " + (questionAry.length + 1));
-    $("#percentage").html((userScore/(questionAry.length + 1) * 100) + "%");
-    $(".carousel-wrapper").hide();
-    $("#jumbotron2").show();
+function animateBar() {
+    width = (timer.time / 45) * 100;
+    $("#progress-bar").css("width", width + "%");
 }
 function nextQuestion() {
     timer.stop();
+    $("#progress-bar").css("width", "100%");
     audioElement.pause();
     if (questionNum < questionAry.length) {
+        $("#progress-div").css("visibility", "visible");
         isQuestion = true;
         $(".carousel").carousel("next");
         timer.start(40);
@@ -117,4 +123,10 @@ function nextQuestion() {
         audioElement.setAttribute("src", questionAry[ranNum].audioSrc);
         audioElement.play();
     }
+}
+function goToResultsPage() {
+    $("#user-score").html(userScore + " / " + questionAry.length);
+    $("#percentage").html((userScore / questionAry.length * 100) + "%");
+    $(".carousel-wrapper").hide();
+    $("#jumbotron2").show();
 }

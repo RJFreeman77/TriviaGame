@@ -10,8 +10,16 @@ h1, h2, h3 {
 img {
     width: 100px;
 }
+.progress {
+    height: 2rem;
+}
+.progress-bar {
+    text-align: center;
+    margin: auto;
+}
 .form-wrapper {
     width: 50%;
+    height: 25rem;
     margin: 0 auto;
     padding: 5%;
 }
